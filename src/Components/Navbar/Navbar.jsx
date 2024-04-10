@@ -25,13 +25,13 @@ const Navbar = () => {
         <p style={{color:'#ff4141'}}>ELITE SHOPPER</p>
       </Link>
       <img onClick={dropdown_toggle} className='nav-dropdown' src={nav_dropdown} alt="" />
-    {location.pathname !== '/login'&&  <ul ref={menuRef} className="nav-menu">
+    {location.pathname !== '/'&&  <ul ref={menuRef} className="nav-menu">
         <li onClick={()=>{setMenu("shop")}}><Link to='/'>Shop</Link>{menu==="shop"?<hr/>:<></>}</li>
         <li onClick={()=>{setMenu("mens")}}><Link to='/mens'>Men</Link>{menu==="mens"?<hr/>:<></>}</li>
         <li onClick={()=>{setMenu("womens")}}><Link to="womens">Women</Link>{menu==="womens"?<hr/>:<></>}</li>
         <li onClick={()=>{setMenu("kids")}}><Link to='/kids'>Kids</Link>{menu==="kids"?<hr/>:<></>}</li>
       </ul> }
-      {location.pathname !== '/login' && <div className="nav-login-cart">
+      {location.pathname !== '/' && <div className="nav-login-cart">
         {/* <Link to='/login'><button>Login</button></Link> */}
         <Link to='/cart'><img src={cart_icon} alt="" /></Link>
         <div className="nav-cart-count">{getTotalCartItems()}</div>
