@@ -22,7 +22,7 @@ const ShopContextProvider = (props) => {
     useEffect(()=>{
         const fetchData = async() =>{
             try {
-            const res = await axios.get('http://localhost:4000/allproducts');
+            const res = await axios.get('https://eliteshopper-be.onrender.com/allproducts');
             setAllProduct(res.data); 
             setCartItems(getDefaultCart(res.data))
             } catch (error) {
