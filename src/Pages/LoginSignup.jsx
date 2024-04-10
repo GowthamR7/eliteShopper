@@ -14,7 +14,7 @@ const LoginSignup = () => {
           <input type="email" placeholder='Email Address' />
           <input type="password" placeholder='Password' />
         </div>
-        {signup === true ?<button onClick={()=> setSignup(!signup)} >Continue</button>:<button onClick={()=> navigate('/')} >Login</button>}
+        {signup === true ?<button onClick={()=> setSignup(!signup)} >Continue</button>:<button onClick={()=> navigate('/shop')} >Login</button>}
         {signup === true ? <p className="loginsignup-login">Already have an account? <span style={{cursor:'pointer'}} onClick={()=> setSignup(!signup)}>Login here</span></p>
         : <p className="loginsignup-login">Don't have an account? <span style={{cursor:'pointer'}} onClick={()=> setSignup(!signup)}>Create here</span></p>}
         <div className="loginsignup-agree">
